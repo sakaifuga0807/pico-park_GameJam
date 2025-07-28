@@ -17,7 +17,8 @@ public class CameraManager : MonoBehaviour
     {
         if(player.transform.position.x > 0.55f && player.transform.position.x < 60.4)
         {
-            transform.position = new Vector3(player.transform.position.x, 0.0f, -10);
+            //transform.position = new Vector3(player.transform.position.x, 0.0f, -10);
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         }
     }
 }
