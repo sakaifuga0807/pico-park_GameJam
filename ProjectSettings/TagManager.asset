@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spring
   - EnemyAttack
+  - Trap
   layers:
   - Default
   - TransparentFX
