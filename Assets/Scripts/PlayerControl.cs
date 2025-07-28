@@ -7,6 +7,9 @@ public class PlayerControl : MonoBehaviour
     private float SPEED = 0.02f;
     private float JUMP = 2.5f;
     private int Ground = 0;
+
+    [SerializeField] GameObject gameOverText;
+
     //private Vector2 _inputDirection;
     //private Animator _anim;
 
@@ -60,6 +63,14 @@ public class PlayerControl : MonoBehaviour
         transform.position = position;
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Trap")
+        {
+            GameOver();
+        }
+    }
+
     // 地面と接触した時。
     void OnTriggerStay2D(Collider2D col)
     {
@@ -81,5 +92,17 @@ public class PlayerControl : MonoBehaviour
         {
             Ground = 1;
         }
+    }
+
+    void GameOver()
+    {
+        // ゲームオーバーテキストを表示する。
+        gameOverText.SetActive(true);
+
+        // プレーヤーのオブジェクトを非表示にする。
+        this.gameObject.SetActive(false);
+
+        // ログでGameOverと表示する。
+        Debug.Log("GameOver");
     }
 }
