@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -97,10 +98,13 @@ public class PlayerControl : MonoBehaviour
     void GameOver()
     {
         // ゲームオーバーテキストを表示する。
-        gameOverText.SetActive(true);
+        //gameOverText.SetActive(true);
 
         // プレーヤーのオブジェクトを非表示にする。
         this.gameObject.SetActive(false);
+
+        // 現在のシーンを再ロードする。
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         // ログでGameOverと表示する。
         Debug.Log("GameOver");
