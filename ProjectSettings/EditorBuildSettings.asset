@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PicoPark-Title.unity
+    guid: a35abe2089310d94eb6bd5424d9c5158
+  - enabled: 1
     path: Assets/Scenes/stage1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/stage2.unity
+    guid: a9ed7ed1e236f9e4998393c5901a64a2
+  - enabled: 1
+    path: Assets/Scenes/stage3.unity
+    guid: 048b1f8eda78d3c4e8309a1c40ecc673
+  - enabled: 1
+    path: Assets/Scenes/stage4.unity
+    guid: 221e0ca8b54fdd149b9f4587305afbc4
+  - enabled: 1
+    path: Assets/Scenes/NextStage.unity
+    guid: 94fcf357767b92e468286fb8a2d3adf9
   m_configObjects: {}

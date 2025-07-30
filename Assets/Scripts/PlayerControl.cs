@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
-    private float SPEED = 0.02f;
+    private float SPEED = 0.03f;
     private float JUMP = 2.5f;
     private int Ground = 0;
 
@@ -69,6 +69,11 @@ public class PlayerControl : MonoBehaviour
         if(col.tag == "Trap")
         {
             GameOver();
+        }
+        
+        if(col.tag == "Stage1Clear")
+        {
+            SceneManager.LoadScene("PicoPark-Title");
         }
     }
 
